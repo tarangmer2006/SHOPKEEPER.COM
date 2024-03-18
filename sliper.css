@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:wght@400;500&display=swap');
+
+@font-face {
+    font-family: "MV Boli V1";
+    src: url("https://db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.eot");
+    src: url("https://db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/a7e3822358f6dcb2f986a68cf24721b2.svg#MV Boli V1")format("svg");
+}
+body{
+    background-color: black;
+}
+.sliper 
+{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-around;
+}
+.wear 
+{
+    border: 2px solid black;
+    margin-top: 30px;
+    background:rgb(1, 41, 59);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    padding: 20px;
+}
+.button button 
+{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:active
+{
+    box-shadow: 2px 2px 15px gray,
+    inset -0px -0px 15px gray;
+}
+.wear img
+{
+    width: 250px;
+    height: 230px;
+    object-fit: cover;
+}
