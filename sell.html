@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="sell.css">
+		<link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+    </head>
+    <body>
+		<header>
+            <div class="navbar"> 
+                <img class="logo1"src="shopkeeper.jpg" >
+                    <nav>
+                     
+                        <ul>
+                            <li><a href="Index.html">HOME</a></li>
+                            <li><a href="help.html">HELP & SUPPORT</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                            
+                            
+          
+                        </ul>
+                    </nav>
+                    <a href="">
+                    <img src="menu.png" class="menu-icon" ></a>
+                </div>
+        </header>
+
+		
+
+
+		<div class="bg">
+			<h1>Bill's Add:</h1>
+			<br>
+       
+        <form>
+            <label for="btype">Bill Type:</label>
+            <input type="text" id="btype" name="btype" required placeholder="Purchase/sell"><br><br>
+
+
+            <label for="cname">Customer Name :</label>
+            <input type="text" id="cname" name="cname" required placeholder="Customer Name"><br><br>
+
+
+            <label for="ino">Invoice No:</label>
+            <input type="text" id="ino" name="ino" required placeholder="Invoice No"><br><br>
+
+            <label for="cno">Customer PhoneNumber:</label>
+            <input type="text" id="cno" name="cno" required placeholder="Phone Number"><br><br>
+
+            <label for="bammount">Bill Amount:</label>
+            <input type="text" name="bammount" id="bammount" required placeholder="Bill Amount"><br><br>
+
+            
+            <label for="Ipic">Invoice Picture:</label>
+            <input type="file" class="Ipic" id="Ipic" name="Ipic" accept="image/*"><br><br>
+
+
+            <label for="bpu">Bill Paid/Unpaid: </label>
+            <input type="text" id="bpu" name="bpu" required placeholder="Paid/Unpaid"><br><br>
+
+
+            <input type="button" name="button" id="btn" value="Add" onclick="AddRow()">
+			<a href="profile.html"><input type="button" name="button" id="btn" value="Return"></a>
+
+           
+            
+
+        </form><br>
+		<br>
+        <h1>PRODUCT DETAILS:</h1>
+		
+		<table border="3" id="show"><br>
+			<thead>
+				<tr>
+					<th>Bill Type</th>
+					<th>Customer Name</th>
+					<th>Invoice No</th>
+					<th>Phone number</th>
+					<th>Bill Amount</th>
+					<th>Invoice Picture</th>
+					<th>Bill Paid/Unpaid</th>
+					
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+
+
+
+	<footer>
+		<div class="row">
+			<div class="col">
+				<img src="shopkeeper.jpg" class="logo">
+				<p>SHOPKEEPER.COM We will Make India’s largest business management platform.</p>
+			</div>
+			
+		  <div class="col">
+				<h3>Office <div class="underlined"><span></span></div></h3>
+				<p>Bhakti Nagar</p>
+				<p>Near New India Colony</p>
+				<p>Ahmedabad,India-380024</p>
+				<p class="email">SHOPKEEPERCOM25@gamil.com</p>
+				<h4>+91-2541254120</h4>
+
+		  </div>
+		  <div class="col">
+
+			<h3>Links<div class="underlined"><span></span></h3>
+				<ul>
+					<li><a href="Index.html">HOME</a></li>
+					
+					
+					<li><a href="help.html">HELP & SUPPORT</a></li>
+					<li><a href="about.html">ABOUT US</a></li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+
+		  </div>
+		 <hr>
+		
+		<p id="copy"class="copy">Copyright © 2024 SHOPKEEPER.COM. All rights reserved. </p>
+
+</footer>
+	
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+		var list6 = [];
+		var list7 = [];
+		
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("btype").value;
+			list2[x] = document.getElementById("cname").value;
+			list3[x] = document.getElementById("ino").value;
+			list4[x] = document.getElementById("cno").value;
+			list5[x] = document.getElementById("bammount").value;
+			list6[x] = document.getElementById("Ipic").value;
+			list7[x] = document.getElementById("bpu").value;
+		
+
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+			var cel6 = NewRow.insertCell(5);
+			var cel7 = NewRow.insertCell(6);
+			
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+			cel6.innerHTML = list6[x];
+			cel7.innerHTML = list7[x];
+			
+
+			n++;
+			x++;
+		}
+
+	</script>
+
+    </body>
+</html>
