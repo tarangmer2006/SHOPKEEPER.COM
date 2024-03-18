@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <form id="loginForm" onsubmit="return handleLogin()">
+                <h1>Login</h1>
+
+                <div class="input">
+                    <input type="text" id="emailField" placeholder="Enter Email-ID" spellcheck="false">
+                    <span id="email_error"></span>
+                </div>
+
+                <div class="input">
+                    <input type="password" id="passwordField" placeholder="Enter Password" required>
+                    <span id="password_error"></span>
+                </div>
+
+                <div class="remember">
+                    <label><input type="checkbox">Remember Me</label>
+                </div>
+
+                <button type="submit" class="btn">LOGIN</button>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            function handleLogin() {
+                var emailField = document.getElementById("emailField");
+                var emailError = document.getElementById("email_error");
+                var password = document.getElementById("passwordField").value;
+                var error = document.getElementById("password_error");
+                // Reset error messages
+                emailError.innerHTML = "";
+                error.innerHTML = "";
+
+                var hasUpperCase = /[A-Z]/.test(password);
+                var hasLowerCase = /[a-z]/.test(password);
+                var hasNumbers = /\d/.test(password);
+                var hasSpecialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+
+                if (password.length < 8) {
+                    error.textContent = "Password must be at least 8 characters long";
+                    return false;
+                }
+                if (!hasUpperCase) {
+                    error.textContent = "Password must contain at least one uppercase letter";
+                    return false;
+                }
+                if (!hasLowerCase) {
+                    error.textContent = "Password must contain at least one lowercase letter";
+                    return false;
+                }
+                if (!hasNumbers) {
+                    error.textContent = "Password must contain at least one number";
+                    return false;
+                }
+                if (!hasSpecialChars) {
+                    error.textContent = "Password must contain at least one special character";
+                    return false;
+                }
+                if (!emailField.value.match(/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/)) {
+                    console.log("Please enter a valid email");
+                    emailError.innerHTML = "Please enter a valid email";
+                    return false; // Prevent form submission
+                }
+                // Redirect to another page
+                window.location.href = "profile.html";
+                return false; // Prevent form submission (you can remove this if you want to submit the form)
+            }
+        </script>
+    </header>
+</body>
+</html>
