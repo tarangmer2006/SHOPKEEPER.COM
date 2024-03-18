@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="pro2.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+	<header>
+		<div class="navbar"> 
+			<img class="logo1"src="shopkeeper.jpg" >
+				<nav>
+				 
+					<ul>
+						<li><a href="Index.html">HOME</a></li>
+						<li><a href="help.html">HELP & SUPPORT</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+						<li><a href="login.html">SHOP LOGIN</a></li>
+						<li><a href="">CUSTOMER LOGIN</a></li>
+	  
+					</ul>
+				</nav>
+				<a href="">
+				<img src="menu.png" class="menu-icon" ></a>
+			</div>
+	</header>
+
+
+
+	<div class="bg">
+
+	    <h1>Product Add:</h1><br>
+		<form>
+			<label for="iname">Iteam Name:</label>
+			<input type="text" id="iname" name="iname" placeholder="Enter Item Name" required><br>
+
+			<br><label for="ppic">Product Picture:</label>
+            <input type="file" class="ppic" id="ppic" name="ppic" accept="image/*"><br>
+
+			<br><label for="punit" class="hedingPrimary">Primary Unit: </label>
+            <select id="punit" class="primaryBox">
+                    <option value="kgs">25-Kilograms</option>
+                    <option value="nos">12-Numbers</option>
+                    <option value="pcs">12-Pcs</option>
+                    <option value="bag">1-Bag</option>
+            </select><br>
+
+			<br><label for="buy" class="purchaseName">Purchase Price:</label>
+        	<input type="text" class="insertPurchase" id="buy" name="buy" placeholder="₹ Enter Price" required><br>
+
+			<br><label for="sale" class="saleName">Sale Price</label>
+            <input type="text" id="sale" class="insertSale" name="sale" placeholder="₹ Enter Price:" required><br>
+
+			<br><p class="mainchake">Tax included:<input id="check" type="checkbox" class="chakeBox"><br></p>
+
+			<br><label for="open" class="">Opening Stock:</label>
+			<input type="text" class="openBoreder" id="open" name="open" placeholder="Enter Count"><br>
+
+			<br><label for="close">Low Stock Alert:</label>
+            <input type="text" class="closeBorder" id="close" name="close" placeholder="Enter Count"><br>
+
+			
+
+			
+			<br><input type="button" name="button" id="btn" value="Add" onclick="AddRow()">
+			<a href="profile.html"><input type="button" name="button" id="btn" value="Return"></a>
+		
+
+			
+		</form>
+		<br>
+		<br>
+		<h1>PRODUCT DETAILS:</h1>
+		<br>
+		
+		<table border="3" id="show">
+			<thead>
+				<tr>
+					<th>Iteam Name</th>
+					<th>Product Image</th>
+					<th>Primary Unit</th>
+					<th>Purchase Price</th>
+					<th>Sale Price</th>
+					<th>Tax included</th>
+					<th>Opening Stock</th>
+					<th>Low Stock Alert</th>
+				</tr>
+			</thead>
+		</table>
+	
+	</div>
+
+
+	<footer>
+		<div class="row">
+			<div class="col">
+				<img src="shopkeeper.jpg" class="logo">
+				<p>SHOPKEEPER.COM We will Make India’s largest business management platform.</p>
+			</div>
+			
+		  <div class="col">
+				<h3>Office <div class="underlined"><span></span></div></h3>
+				<p>Bhakti Nagar</p>
+				<p>Near New India Colony</p>
+				<p>Ahmedabad,India-380024</p>
+				<p class="email">SHOPKEEPERCOM25@gamil.com</p>
+				<h4>+91-2541254120</h4>
+
+		  </div>
+		  <div class="col">
+
+			<h3>Links<div class="underlined"><span></span></h3>
+				<ul>
+					<li><a href="Index.html">HOME</a></li>
+				
+					<li><a href="help.html">HELP & SUPPORT</a></li>
+					<li><a href="about.html">ABOUT US</a></li>
+					<li><a href="contact.html">CONTACTS</a></li>
+				</ul>
+
+		  </div>
+		 <hr>
+		
+		<p id="copy"class="copy">Copyright © 2024 SHOPKEEPER.COM. All rights reserved. </p>
+
+</footer>
+
+
+
+
+
+
+
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+		var list6 = [];
+		var list7 = [];
+		var list8 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("iname").value;
+			list2[x] = document.getElementById("ppic").value;
+			list3[x] = document.getElementById("punit").value;
+			list4[x] = document.getElementById("buy").value;
+			list5[x] = document.getElementById("sale").value;
+			list6[x] = document.getElementById("check").value;
+			list7[x] = document.getElementById("open").value;
+			list8[x] = document.getElementById("close").value;
+
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+			var cel6 = NewRow.insertCell(5);
+			var cel7 = NewRow.insertCell(6);
+			var cel8 = NewRow.insertCell(7);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+			cel6.innerHTML = list6[x];
+			cel7.innerHTML = list7[x];
+			cel8.innerHTML = list8[x];
+
+			n++;
+			x++;
+		}
+
+	</script>
+</body>
+</html>
