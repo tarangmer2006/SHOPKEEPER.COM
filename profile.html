@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>profile page</title>
+<link href="profile.css" rel="stylesheet">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="footer.css">
+
+</head>
+<body>
+    
+    <div class="hero">
+        <nav>
+            <img src="shopkeeper.jpg" class="logo">
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                
+                
+            </ul>
+            <img src="OIP.jpg" class="user-pic" onclick="togglemenu()">
+            <div class="sub-menu-wrap" id="submenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="User-Profile-PNG-Picture.png">
+
+                    </div><hr>
+                       <a href="Editprofile.html" class="sub-menu-link">
+                           <img src="profile.png">
+                           <p>Edit Profile</p>
+                           <span></span>
+                       </a>
+                       <a href="help.html" class="sub-menu-link">
+                        <img src="help.png">
+                        <p>Help & Support</p>
+                        <span></span>
+                    </a>
+                       
+                       <a href="Index.html" class="sub-menu-link">
+                        <img src="logout.png">
+                        <p>Logout</p>
+                        <span></span>
+                    </a>
+
+                </diV>
+            </div>
+
+
+        </nav>
+        <div class="raw" >
+
+            <div class="col">
+                 <h1 onclick="menu()"> Welcome</h1><br><br>
+                 <ul>
+                    <li><a href="Data Enter.xlsx" class="color"> > Data Enter</a></li> <br><br>
+                    <li><a href="sell.html" class="color">> SELL Invoice</a></li><br><br>
+                    <li><a href="sell.html"class="color">> PURCHASE Invoice</a></li><br><br>
+                    <li><a href="pro2.html"class="color">> PRODUCT ADD</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+        
+    </div>
+    
+
+
+
+</div>
+
+
+
+
+<footer>
+    <div class="row">
+        <div class="col">
+            <img src="shopkeeper.jpg" class="logo">
+            <p>SHOPKEEPER.COM We will Make India’s largest business management platform.</p>
+        </div>
+        
+      <div class="col">
+            <h3>Office <div class="underlined"><span></span></div></h3>
+            <p>Bhakti Nagar</p>
+            <p>Near New India Colony</p>
+            <p>Ahmedabad,India-380024</p>
+            <p class="email">SHOPKEEPERCOM25@gamil.com</p>
+            <h4>+91-2541254120</h4>
+
+      </div>
+      <div class="col">
+
+        <h3>Links<div class="underlined"><span></span></h3>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                
+                <li><a href="help.html">HELP & SUPPORT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACTS</a></li>
+            </ul>
+
+      </div>
+     <hr>
+    
+    <p id="copy"class="copy">Copyright © 2024 SHOPKEEPER.COM. All rights reserved. </p>
+
+</footer>
+
+
+
+
+
+
+    <script>
+        let submenu = document.getElementById("submenu");
+        function togglemenu(){
+            submenu.classList.toggle("open-menu");
+        }
+    
+    </script>
+
+
+
+</body>
+</html>
