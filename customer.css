@@ -1,0 +1,14 @@
+.midcustomer{
+    background: #000;
+    color: white;
+    width: 100%;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 50px;
+}
+.syntax{
+    padding-left: 80px;
+}
